@@ -7,6 +7,9 @@
     <groupId>edu.bu</groupId>
     <artifactId>cs-622</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>Assignment One</module>
+    </modules>
     <packaging>pom</packaging>
 
     <name>CS 622</name>
@@ -24,7 +27,6 @@
     </properties>
 
     <dependencyManagement>
-
         <dependencies>
             <!-- https://mvnrepository.com/artifact/org.junit/junit-bom -->
             <dependency>
@@ -35,38 +37,29 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-
-
-
     </dependencyManagement>
 
     <dependencies>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${sl4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>${logback.version}</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
@@ -125,7 +118,6 @@
 
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.1.0</version>
                 <configuration>
                     <filesets>
                         <fileset>
